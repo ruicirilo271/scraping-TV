@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolher Canal ao Vivo</title>
+  <link href="https://vjs.zencdn.net/8.9.0/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/8.9.0/video.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #333;
+      border: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>📺 Escolha um Canal ao Vivo</h1>
+
+  <div>
+    <a href="{{ url_for('play', channel_id=1) }}">
+      <button>Assistir Sport TV 1</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=2) }}">
+      <button>Assistir Hustler HD</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=3) }}">
+      <button>Assistir Sport TV 2</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=4) }}">
+      <button>Assistir Bang U</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=5) }}">
+      <button>Assistir Cum 4K</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=6) }}">
+      <button>Assistir Mytime</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=7) }}">
+      <button>Assistir Benfica TV</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=8) }}">
+      <button>Assistir Sporting TV</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=9) }}">
+      <button>Assistir TVI Reality</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=10) }}">
+      <button>Assistir Moviesphere</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=11) }}">
+      <button>Assistir RTP 1</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=12) }}">
+      <button>Assistir Miami TV</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=13) }}">
+      <button>Assistir Dorcel TV</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=14) }}">
+      <button>Assistir Trace Latina</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=15) }}">
+      <button>Assistir Abola TV</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=16) }}">
+      <button>Assistir Sport TV NBA</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=17) }}">
+      <button>Assistir CM TV</button>
+    </a>
+    <a href="{{ url_for('play', channel_id=18) }}">
+      <button>Assistir SIC Notícias</button>
+    </a>
+  </div>
+</body>
+</html>
+
+
+
+
+

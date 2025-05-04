@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistir Canal</title>
+  <link href="https://vjs.zencdn.net/8.9.0/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/8.9.0/video.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    #player {
+      margin-top: 20px;
+      width: 960px;
+      height: 540px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assistir ao Canal</h1>
+
+  {% if stream_url %}
+    <video id="player" class="video-js vjs-default-skin" controls autoplay>
+      <source src="{{ stream_url }}" type="application/x-mpegURL">
+    </video>
+    <script>
+      var player = videojs('player');
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('{{ stream_url }}');
+        hls.attachMedia(player.el());
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          player.play();
+        });
+      }
+    </script>
+  {% else %}
+    <p>Não foi possível carregar o stream.</p>
+  {% endif %}
+</body>
+</html>
