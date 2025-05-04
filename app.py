@@ -36,7 +36,7 @@ def get_m3u8_url(page_url):
 
 @app.route('/')
 def index():
-    # Página inicial com links para os canais
+    # Página inicial com o novo link para o canal "sport-tv-nba"
     return render_template('index.html')
 
 @app.route('/play/<int:channel_id>')
@@ -75,9 +75,9 @@ def play(channel_id):
     elif channel_id == 16:
         stream_url = get_m3u8_url("https://www.pirilampo.tv/live-tv/sport-tv-nba.html")
     elif channel_id == 17:
-        stream_url = get_m3u8_url("https://www.pirilampo.tv/live-tv/cmtv.html")
+        stream_url = get_m3u8_url("https://www.pirilampo.tv/live-tv/cmtv.html")  # Novo canal "CM TV"
     elif channel_id == 18:
-        stream_url = get_m3u8_url("https://www.pirilampo.tv/live-tv/sic-noticias.html")
+        stream_url = get_m3u8_url("https://www.pirilampo.tv/live-tv/sic-noticias.html")  # Novo canal "SIC Notícias"
     else:
         stream_url = None  # Caso não haja o canal
 
@@ -85,7 +85,6 @@ def play(channel_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 
 
 
