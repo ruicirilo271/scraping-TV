@@ -3,5 +3,6 @@ selenium-wire
 blinker
 selenium
 requests
-
+packaging
+setuptools
 
