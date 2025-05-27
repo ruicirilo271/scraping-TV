@@ -1,6 +1,6 @@
 Flask
 selenium-wire
-blinker
+blinker==1.4
 selenium
 requests
 packaging
